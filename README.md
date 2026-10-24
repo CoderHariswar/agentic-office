@@ -9,6 +9,10 @@
 ![Agents](https://img.shields.io/badge/agents-55-555)
 ![Dependencies](https://img.shields.io/badge/dependencies-none%20(Python%20stdlib)-brightgreen)
 
+[![Watch the 73-second tour of Agentic Office](docs/media/video-thumbnail-1920x1080.png)](docs/media/agentic-office-promo.mp4)
+
+▶ **[Watch the 73-second tour](docs/media/agentic-office-promo.mp4)**: one idea goes from the CEO prompt to a tested game, with Jira and Confluence kept in sync.
+
 > [!WARNING]
 > **Use an API key, not a Claude subscription, for anything beyond light personal experiments.** This project was built and tested on a Claude Pro/Max subscription. Running dozens of agents and headless sessions goes beyond the ordinary individual use that subscriptions are meant for. [Read why and how to switch](#subscription-or-api-key).
 
