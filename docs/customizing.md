@@ -4,7 +4,7 @@ Everything is plain Markdown and JSON. Change what you like; these are the commo
 
 ## Make it your company
 
-- **Company OS:** edit `CLAUDE.md`. It holds the rules every agent follows, the approval table, the routing table and Meera's persona. Keep the approval gates unless you have a reason to loosen them.
+- **Company OS:** edit `CLAUDE.md`. It holds the rules every agent follows, the approval table, the routing table and Ankit's persona. Keep the approval gates unless you have a reason to loosen them.
 - **Architecture:** `workspace/confluence/company/architecture.md` is the design document the office was built from. Update it when you change how the company works.
 - **Products:** code goes in `products/<name>/`, product docs in `workspace/confluence/products/<name>/`.
 
@@ -53,7 +53,7 @@ See the [Claude Code settings docs](https://code.claude.com/docs/en/settings).
 
 ## Add a slash command
 
-Create `.claude/commands/<name>.md` with a `description` in the frontmatter and instructions written to Meera. Look at `.claude/commands/standup.md` for the style.
+Create `.claude/commands/<name>.md` with a `description` in the frontmatter and instructions written to Ankit. Look at `.claude/commands/standup.md` for the style.
 
 ## Change a department's workflow
 

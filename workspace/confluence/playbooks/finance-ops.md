@@ -38,8 +38,8 @@ This department uses the shared reporting categories directly.
 
 ## Intake
 
-- Cost and budget questions: from Meera, any lead, or Hemant's own alerts.
-- Operating calendar, status and action items: from Meera and every ritual.
+- Cost and budget questions: from Ankit, any lead, or Hemant's own alerts.
+- Operating calendar, status and action items: from Ankit and every ritual.
 - Documentation requests: from anyone who needs something filed, found or cleaned up.
 - Each request becomes an `OPS` task; Anil assigns the owner and confirms capacity.
 
@@ -49,16 +49,16 @@ This department uses the shared reporting categories directly.
 |---|---|---|
 | Hemant | Anil | Cost reports, unit economics, variance alerts |
 | Hemant | Neha Agarwal (Product) | Cost floors for pricing hypotheses |
-| Rashmi | Meera | Portfolio status, agendas, action register, risk summaries |
+| Rashmi | Ankit | Portfolio status, agendas, action register, risk summaries |
 | Rashmi | Bhavna | Meeting records to file |
 | Bhavna | Everyone | Index updates, stale and missing-document alerts |
 | Anil | Kiran Mathew (HR) | Cost impact of new or changed agent roles |
-| Anil | CEO via Meera | Spend approval requests |
+| Anil | CEO via Ankit | Spend approval requests |
 
 ## Approval gates
 
 - Any spend of any amount, any new paid tool or subscription, and major budget commitments need CEO approval through `workspace/approvals/`.
-- Moving budget between products needs Meera with the affected product owners.
+- Moving budget between products needs Ankit with the affected product owners.
 - Bhavna never changes the substance of an official document; content changes go to the document's owner.
 
 ## Financial reporting rules

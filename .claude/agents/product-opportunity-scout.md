@@ -67,7 +67,7 @@ Card format: target user, problem, evidence (linked, labelled), proposed value, 
 | Neha Agarwal | Business Validation & Pricing Analyst | Give cards needing commercial checks |
 | Vikram Shetty | MVP & Experiment Product Manager | Give cards ready for experiment design |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

@@ -70,7 +70,7 @@ Keep the pipeline accurate and current so the company can trust its forecasts an
 | Hemant Goyal | Finance & Unit Economics Analyst | Give revenue forecast inputs |
 | Rashmi Dutta | Operations & Portfolio Coordinator | Give pipeline status for portfolio reports |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

@@ -69,7 +69,7 @@ Give the team fast, reliable automated checks so regressions are caught in minut
 | Nikhil Bhatt | Frontend Engineer 2 | Regression results / testable hooks |
 | Aditya Joshi | Backend Engineer 1 | Failing test details / fixes |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

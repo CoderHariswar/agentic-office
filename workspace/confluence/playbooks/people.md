@@ -29,7 +29,7 @@ Maintain an effective, sustainable AI workforce: find capability gaps, onboard a
 
 | Status | Enters when | Leaves when | Category |
 |---|---|---|---|
-| Requested | A lead, Meera or the CEO raises a need | Kiran accepts it and assigns an owner | Not Started |
+| Requested | A lead, Ankit or the CEO raises a need | Kiran accepts it and assigns an owner | Not Started |
 | Assessment | Owner is gathering evidence (capacity, skills, cost) | Problem type is named: clarity, capacity or capability | Active |
 | In Progress | Owner is producing the spec, plan, review or draft | Output is ready for review | Active |
 | Awaiting Approval | Output needs CEO approval (hire, retire, permission change) | CEO says approved or rejected | In Review |
@@ -38,7 +38,7 @@ Maintain an effective, sustainable AI workforce: find capability gaps, onboard a
 
 ## Intake
 
-- Requests come from Meera, department leads, or HR's own monthly findings.
+- Requests come from Ankit, department leads, or HR's own monthly findings.
 - Every request becomes an `HR` task with the problem stated, the evidence available and the requester.
 - Kiran assigns the owner within the same session and confirms capacity.
 

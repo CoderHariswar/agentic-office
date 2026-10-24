@@ -72,7 +72,7 @@ Tell the company which marketing efforts produce real users and customers, and w
 | Deepak Chauhan | Publishing & Distribution Agent | Get publication log and UTM tags |
 | Sameer Bhatia | Sales Lead | Share lead quality by source |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

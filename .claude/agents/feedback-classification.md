@@ -68,7 +68,7 @@ Turn raw customer feedback into ranked, evidence-backed themes and get them to t
 | Pallavi Jain | Retention & Customer Health Analyst | Give churn-signal themes |
 | Meghna Bose | Onboarding & Education Agent | Give "confusion" themes for education |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

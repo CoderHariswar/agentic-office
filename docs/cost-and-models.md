@@ -4,7 +4,7 @@ How much the office costs to run, where the money goes, and how to change models
 
 ## Measured runs
 
-Both runs used the `balanced` preset, with the main session (Meera) on Opus. Figures are Claude Code's own usage report for the run, priced at API rates.
+Both runs used the `balanced` preset, with the main session (Ankit) on Opus. Figures are Claude Code's own usage report for the run, priced at API rates.
 
 **Run A: "Build a simple tic-tac-toe game"** (COO, CTO, frontend engineer, QA; one bug found and fixed; about 3 minutes)
 
@@ -27,7 +27,7 @@ Both runs used the `balanced` preset, with the main session (Meera) on Opus. Fig
 ## What this tells you
 
 - **Cache reads dominate.** Every turn re-reads the Company OS, the agent's profile and the conversation so far. Claude Code caches this, so it is billed at a fraction of normal input price. That is how 1.3 M tokens cost about a dollar.
-- **The main session is the biggest cost.** Meera reads every agent's report and keeps the whole conversation, so about 75% of the cost was the main session. Moving only the main session from Opus to Sonnet is the single biggest saving.
+- **The main session is the biggest cost.** Ankit reads every agent's report and keeps the whole conversation, so about 75% of the cost was the main session. Moving only the main session from Opus to Sonnet is the single biggest saving.
 - **Agents are cheap per task.** A specialist on Sonnet doing one focused job cost $0.05–0.15.
 
 ## 10 small tasks a day

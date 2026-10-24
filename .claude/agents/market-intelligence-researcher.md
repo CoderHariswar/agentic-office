@@ -67,7 +67,7 @@ Give the company an accurate, current picture of markets, competitors and new ca
 | Aakash Tiwari | Marketing Researcher | Share competitor messaging findings |
 | Farhan Qureshi | Customer Research Analyst | Cross-check market claims with customer evidence |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

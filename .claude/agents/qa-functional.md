@@ -70,7 +70,7 @@ Confirm that each feature meets its requirements and acceptance criteria for rea
 | Manish Yadav | QA 2: Automation & Regression | Cases worth automating / regression results |
 | Arnav Das | Customer Support Agent | Confirmed bugs / customer-reported issues |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

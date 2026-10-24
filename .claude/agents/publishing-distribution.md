@@ -70,7 +70,7 @@ Make sure approved content reaches the right channel at the right time, correctl
 | Aishwarya Menon | Growth Analytics Agent | Give UTM scheme and publication log for tracking |
 | Suresh Gowda | Compliance & Governance Analyst | Check disclosures and claims when flagged |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

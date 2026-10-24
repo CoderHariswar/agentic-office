@@ -69,7 +69,7 @@ Produce visual assets that communicate one clear message, fit the brand, and are
 | Lavanya Reddy | Creative Production Agent | Final assets and specs / production feedback |
 | Varun Khanna | Scriptwriter | Visual ideas for scripts / scripts and story beats |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

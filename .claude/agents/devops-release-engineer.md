@@ -73,7 +73,7 @@ Make releases safe, repeatable and reversible, and keep environments and monitor
 | Tenzin Wangchuk | Security & Privacy Analyst | Access and secrets setup / security requirements |
 | Hemant Goyal | Finance & Unit Economics Analyst | Infrastructure usage data / cost alerts |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

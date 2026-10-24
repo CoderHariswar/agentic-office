@@ -2,7 +2,7 @@
 description: Daily async stand-up across the company from the task files
 ---
 
-As Meera (COO), run the daily stand-up without calling any agent unless a task is blocked:
+As Ankit (COO), run the daily stand-up without calling any agent unless a task is blocked:
 
 0. Bring in and handle new Jira comments as in `/pull-comments`.
 1. Read every file in `workspace/jira/` that is not in category `Complete`.

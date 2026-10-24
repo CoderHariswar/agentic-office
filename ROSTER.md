@@ -7,13 +7,13 @@
 | Name | Role | Agent file | Reports to |
 |---|---|---|---|
 | You | Founder / CEO | — (the user) | — |
-| Meera Iyer | Chief of Staff / COO | — (main session, see `CLAUDE.md`) | CEO |
+| Ankit Jha | Chief of Staff / COO | — (main session, see `CLAUDE.md`) | CEO |
 
 ## Product & Innovation
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Arjun Mehta | Product Lead / Portfolio Lead | `product-lead` | Meera Iyer | opus |
+| Arjun Mehta | Product Lead / Portfolio Lead | `product-lead` | Ankit Jha | opus |
 | Kavya Raghunathan | Market Intelligence Researcher | `market-intelligence-researcher` | Arjun Mehta | sonnet |
 | Farhan Qureshi | Customer Research Analyst | `customer-research-analyst` | Arjun Mehta | sonnet |
 | Ishita Banerjee | Persona Simulation Researcher | `persona-simulation-researcher` | Arjun Mehta | sonnet |
@@ -27,7 +27,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Ananya Sen | Design Lead | `design-lead` | Meera Iyer | sonnet |
+| Ananya Sen | Design Lead | `design-lead` | Ankit Jha | sonnet |
 | Zoya Mirza | Visual Designer | `visual-designer` | Ananya Sen | sonnet |
 | Karthik Subramanian | Product Designer | `product-designer` | Ananya Sen | sonnet |
 | Pooja Deshpande | UX Researcher | `ux-researcher` | Ananya Sen | sonnet |
@@ -36,7 +36,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Rahul Venkatesh | CTO / Engineering Lead | `cto` | Meera Iyer | opus |
+| Rahul Venkatesh | CTO / Engineering Lead | `cto` | Ankit Jha | opus |
 | Aditya Joshi | Backend Engineer 1 (APIs & data) | `backend-engineer-1` | Rahul Venkatesh | sonnet |
 | Harpreet Singh Gill | Backend Engineer 2 (integrations & performance) | `backend-engineer-2` | Rahul Venkatesh | sonnet |
 | Sneha Pillai | Frontend Engineer 1 (UI & accessibility) | `frontend-engineer-1` | Rahul Venkatesh | sonnet |
@@ -51,7 +51,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Riya Kapoor | Marketing Lead | `marketing-lead` | Meera Iyer | sonnet |
+| Riya Kapoor | Marketing Lead | `marketing-lead` | Ankit Jha | sonnet |
 | Aakash Tiwari | Marketing Researcher | `marketing-researcher` | Riya Kapoor | sonnet |
 | Shreya Ghosh | Content Strategist | `content-strategist` | Riya Kapoor | sonnet |
 | Varun Khanna | Scriptwriter | `scriptwriter` | Riya Kapoor | sonnet |
@@ -63,7 +63,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Sameer Bhatia | Sales Lead | `sales-lead` | Meera Iyer | sonnet |
+| Sameer Bhatia | Sales Lead | `sales-lead` | Ankit Jha | sonnet |
 | Nandini Prasad | Prospect Researcher | `prospect-researcher` | Sameer Bhatia | sonnet |
 | Abhishek Pandey | Lead Qualification Agent | `lead-qualification` | Sameer Bhatia | haiku |
 | Simran Kaur | Outreach & Follow-up Agent | `outreach-followup` | Sameer Bhatia | sonnet |
@@ -74,7 +74,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Swati Chaturvedi | Customer Success Lead | `customer-success-lead` | Meera Iyer | sonnet |
+| Swati Chaturvedi | Customer Success Lead | `customer-success-lead` | Ankit Jha | sonnet |
 | Arnav Das | Customer Support Agent | `customer-support` | Swati Chaturvedi | haiku |
 | Meghna Bose | Onboarding & Education Agent | `onboarding-education` | Swati Chaturvedi | sonnet |
 | Yusuf Ansari | Feedback Classification Agent | `feedback-classification` | Swati Chaturvedi | haiku |
@@ -84,7 +84,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Rajeev Sharma | Chief Risk, Legal & Compliance Officer | `chief-risk-officer` | Meera Iyer (direct line to CEO) | opus |
+| Rajeev Sharma | Chief Risk, Legal & Compliance Officer | `chief-risk-officer` | Ankit Jha (direct line to CEO) | opus |
 | Tenzin Wangchuk | Security & Privacy Analyst | `security-privacy-analyst` | Rajeev Sharma | sonnet |
 | Aparna Bhattacharya | Legal & Contracts Analyst | `legal-contracts-analyst` | Rajeev Sharma | sonnet |
 | Suresh Gowda | Compliance & Governance Analyst | `compliance-governance-analyst` | Rajeev Sharma | sonnet |
@@ -94,7 +94,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Kiran Mathew | Head of People & Culture | `people-lead` | Meera Iyer | sonnet |
+| Kiran Mathew | Head of People & Culture | `people-lead` | Ankit Jha | sonnet |
 | Ritika Arora | Talent & Hiring Analyst | `talent-hiring-analyst` | Kiran Mathew | sonnet |
 | Pranav Kamath | Workload & Capacity Analyst | `workload-capacity-analyst` | Kiran Mathew | haiku |
 | Lakshmi Narayanan | Learning & Development Analyst | `learning-development-analyst` | Kiran Mathew | sonnet |
@@ -104,7 +104,7 @@
 
 | Name | Role | Agent file | Reports to | Model |
 |---|---|---|---|---|
-| Anil Thakur | Finance & Operations Lead | `finance-ops-lead` | Meera Iyer | sonnet |
+| Anil Thakur | Finance & Operations Lead | `finance-ops-lead` | Ankit Jha | sonnet |
 | Hemant Goyal | Finance & Unit Economics Analyst | `finance-unit-economics-analyst` | Anil Thakur | sonnet |
 | Rashmi Dutta | Operations & Portfolio Coordinator | `operations-portfolio-coordinator` | Anil Thakur | haiku |
 | Bhavna Trivedi | Documentation & Knowledge Steward | `knowledge-steward` | Anil Thakur | haiku |

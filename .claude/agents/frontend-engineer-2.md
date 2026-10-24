@@ -70,7 +70,7 @@ Make frontends fast, reliable and correct in how they handle data, so users alwa
 | Karthik Subramanian | Product Designer | Feasibility feedback / interaction specs |
 | Manish Yadav | QA 2: Automation & Regression | Testable hooks / regression results |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

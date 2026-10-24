@@ -68,7 +68,7 @@ Make sure the sales team spends time only on leads with a real fit, need and pat
 | Sameer Bhatia | Sales Lead | Get standards; escalate borderline cases |
 | Prachi Patil | CRM & Pipeline Analyst | Give status updates for the pipeline |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

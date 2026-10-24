@@ -72,7 +72,7 @@ Help qualified buyers see exactly how the product solves their problem, and give
 | Aparna Bhattacharya | Legal & Contracts Analyst | Get contract and terms review |
 | Simran Kaur | Outreach & Follow-up Agent | Get conversation history; hand back follow-ups to draft |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

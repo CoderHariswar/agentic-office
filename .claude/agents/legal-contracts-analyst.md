@@ -71,7 +71,7 @@ Give the company clear, early legal drafts and issue lists so qualified counsel 
 | Sameer Bhatia | Sales Lead | Review deal terms and redlines |
 | Shreya Ghosh | Content Strategist | Review claims in public content when asked |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

@@ -72,7 +72,7 @@ Turn positioning and research into a steady, coherent flow of content that the a
 | Deepak Chauhan | Publishing & Distribution Agent | Give schedule and channel plan |
 | Meghna Bose | Onboarding & Education Agent | Share educational content plans to avoid overlap |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

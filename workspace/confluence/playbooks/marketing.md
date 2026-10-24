@@ -48,7 +48,7 @@ Blocked work at any status sets `category: Blocked` with the blocker and its own
 
 ## Intake
 
-- **From the CEO or Meera:** routed to Riya, who creates an `MKT` task at Ideas.
+- **From the CEO or Ankit:** routed to Riya, who creates an `MKT` task at Ideas.
 - **From Product Managers:** PMs may create `MKT` tasks; Riya assigns the owner and confirms capacity.
 - **From Sales:** objections and content requests go to Riya as `MKT` tasks.
 - Every task must have one owner, a priority, acceptance criteria and links before it leaves Ideas.
@@ -65,7 +65,7 @@ Blocked work at any status sets `category: Blocked` with the blocker and its own
 8. After CEO approval, Deepak schedules and logs the publication.
 9. Aishwarya analyzes results and recommends the next experiment.
 
-Each handoff ends with the sender's report naming the next owner. Meera routes it.
+Each handoff ends with the sender's report naming the next owner. Ankit routes it.
 
 ## Review and approval gates
 

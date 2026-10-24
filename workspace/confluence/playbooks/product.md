@@ -47,7 +47,7 @@ Any status can move to **Blocked** (shared category Blocked) with the blocker an
 ## Intake
 
 Work arrives in four ways:
-1. **CEO idea** via `/idea`. Meera routes to Arjun, who has Rohan write an opportunity card.
+1. **CEO idea** via `/idea`. Ankit routes to Arjun, who has Rohan write an opportunity card.
 2. **Signals** from research, analytics, sales objections and support themes.
 3. **Requests** from other departments, filed as `PROD` tasks.
 4. **Scheduled reviews** (weekly Product & Research review, monthly portfolio review).

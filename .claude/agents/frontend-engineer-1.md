@@ -69,7 +69,7 @@ Turn designs into interfaces that look right, work for every user on every scree
 | Nikhil Bhatt | Frontend Engineer 2 | Components / state and data wiring |
 | Divya Krishnan | QA 1: Functional & Acceptance | Builds to test / defects |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

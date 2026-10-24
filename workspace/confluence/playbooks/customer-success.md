@@ -41,7 +41,7 @@ Jira key: `CS`. Statuses and their meaning:
 
 ## Intake
 
-- CEO or COO requests arrive through Meera and become `CS` tasks.
+- CEO or COO requests arrive through Ankit and become `CS` tasks.
 - Customer messages and feedback files are placed in `workspace/confluence/research/` and turned into tasks by Arnav.
 - Sales hands off each new customer with a note to Swati.
 - Release notes from Product trigger a content-freshness check by Meghna.

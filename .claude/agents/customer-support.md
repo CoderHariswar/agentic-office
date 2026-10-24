@@ -70,7 +70,7 @@ Resolve customer requests accurately and quickly, and escalate the rest with eve
 | Divya Krishnan | QA 1: Functional & Acceptance | Give reproducible bug reports |
 | Pallavi Jain | Retention & Customer Health Analyst | Give signs of an at-risk account |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

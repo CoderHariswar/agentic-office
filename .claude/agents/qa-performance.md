@@ -69,7 +69,7 @@ Find performance and reliability risks before users do, with measurements anyone
 | Nikhil Bhatt | Frontend Engineer 2 | Client performance findings / fixes |
 | Fatima Siddiqui | Risk & Release Review Analyst | Release performance evidence / release requirements |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

@@ -54,7 +54,7 @@ The ideal customer profile per product lives in `workspace/confluence/sales/plan
 
 ## Intake
 
-- **From the CEO or Meera:** routed to Sameer, who creates a `SALES` task.
+- **From the CEO or Ankit:** routed to Sameer, who creates a `SALES` task.
 - **From Marketing:** inbound leads go to Abhishek for qualification.
 - **From Product Managers:** PMs may create `SALES` tasks (for example, a pilot customer search); Sameer assigns the owner.
 

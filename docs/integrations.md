@@ -60,7 +60,7 @@ CONFLUENCE_SPACE_NAME=Agentic Office
 | Owner, reporter, goal, acceptance criteria, due date | Issue description |
 | Each line of `## Notes / log` | One issue comment, prefixed `[office]` |
 
-**Comments from people:** anything you write on an issue without the `[office]` prefix is pulled into the task log by `/pull-comments` (also run by `/standup`). Meera then answers or acts on it.
+**Comments from people:** anything you write on an issue without the `[office]` prefix is pulled into the task log by `/pull-comments` (also run by `/standup`). Ankit then answers or acts on it.
 
 ## 3. Confluence
 
@@ -85,7 +85,7 @@ Page titles must be unique within a space; the documentation standard has agents
 
 - They do nothing until their settings exist in `.env`.
 - They only send what changed. Each script keeps a small state file (`.jira-state.json`, `.confluence-state.json`) that maps local files to Jira issues and Confluence pages. These files are git-ignored because they are specific to your site. Keep them: if you delete them, the next sync creates duplicates.
-- They never block the agents. Errors go to `workspace/jira/.jira-sync.log` and `workspace/confluence/.confluence-sync.log`, and Meera mentions them if they are not empty.
+- They never block the agents. Errors go to `workspace/jira/.jira-sync.log` and `workspace/confluence/.confluence-sync.log`, and Ankit mentions them if they are not empty.
 
 ## Troubleshooting
 

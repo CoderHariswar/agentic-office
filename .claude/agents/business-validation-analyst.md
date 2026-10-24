@@ -69,7 +69,7 @@ Make sure every product bet has a believable path to sustainable revenue, and th
 | Riya Kapoor | Marketing Lead | Check channel and positioning assumptions |
 | Raghav Saxena | Demo & Proposal Agent | Align pricing drafts with sales proposals |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

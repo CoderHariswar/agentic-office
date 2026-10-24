@@ -25,7 +25,7 @@ Reduce legal, privacy, security and regulatory risk across every product while k
 | Suresh Gowda | Compliance & Governance Analyst | `compliance-governance-analyst` |
 | Fatima Siddiqui | Risk & Release Review Analyst | `risk-release-reviewer` |
 
-Reporting: operationally coordinated by Meera Iyer (COO). Rajeev has a direct escalation line to the CEO.
+Reporting: operationally coordinated by Ankit Jha (COO). Rajeev has a direct escalation line to the CEO.
 
 ## Workflow
 
@@ -44,7 +44,7 @@ A task waiting on another team's fix is marked Blocked in its category field.
 
 ## Intake
 
-- Requests through Meera, or directly from Product, Engineering, Sales or Marketing as `RISK` tasks.
+- Requests through Ankit, or directly from Product, Engineering, Sales or Marketing as `RISK` tasks.
 - Every new product idea gets a light risk check before validation.
 - Every planned release opens a release-review task for Fatima.
 - Contracts, proposals and public claims go to Aparna before sending.
@@ -90,7 +90,7 @@ Mandatory gates cannot be waived to meet a deadline.
 | Tenzin | Rahul Venkatesh | Remediation `ENG` tasks |
 | Aparna | Raghav Saxena, Sameer Bhatia | Contract and proposal issue lists |
 | Suresh | Deepak Chauhan, Simran Kaur | Disclosure and consent checks |
-| Fatima | Meera / CEO | Release recommendation and approval file |
+| Fatima | Ankit / CEO | Release recommendation and approval file |
 
 ## Recurring rituals
 

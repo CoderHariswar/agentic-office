@@ -205,7 +205,7 @@ def write_home(page_id, name):
     jira = os.environ.get("JIRA_PROJECT_KEY")
     jira_link = (f' Work tracking lives in <a href="{html.escape(os.environ["JIRA_SITE"].rstrip("/"))}/browse/'
                  f'{html.escape(jira)}">Jira ({html.escape(jira)})</a>.') if jira else ""
-    body = ('<ac:structured-macro ac:name="info"><ac:rich-text-body><p><strong>Owner:</strong> Meera Iyer (coo) · '
+    body = ('<ac:structured-macro ac:name="info"><ac:rich-text-body><p><strong>Owner:</strong> Ankit Jha (coo) · '
             '<strong>Maintained by:</strong> Bhavna Trivedi (knowledge-steward)</p></ac:rich-text-body></ac:structured-macro>'
             '<p>Company documentation for the agentic office. Every page is written by the agent named in its owner panel '
             f'and kept in sync automatically from the office workspace.{jira_link}</p>'

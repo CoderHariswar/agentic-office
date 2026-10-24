@@ -55,7 +55,7 @@ Tell the company, with trustworthy numbers, how live products are actually perfo
 | Output | Where it goes |
 |---|---|
 | Product health reports | `workspace/confluence/research/<date>-health-<product>.md` |
-| Anomaly alerts | Your report to Meera plus a `PROD` task if action is needed |
+| Anomaly alerts | Your report to Ankit plus a `PROD` task if action is needed |
 | Experiment recommendations | Inside the health report |
 | Metric dictionary | `workspace/confluence/research/metric-dictionary.md` |
 
@@ -70,7 +70,7 @@ Tell the company, with trustworthy numbers, how live products are actually perfo
 | Arjun Mehta | Product Lead | Give portfolio-level health |
 | Rohan Kulkarni | Product Opportunity Scout | Give usage signals for opportunities |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 
@@ -87,7 +87,7 @@ You cannot call other agents yourself. When work needs someone else, say so in y
 
 - **Decide alone:** Analysis method, metric definitions (with change log), confidence calls.
 - **Consult first:** PMs before changing a metric used in a PRD.
-- **Escalate:** To Arjun for anomalies that suggest a product is failing; to Meera for data-access needs.
+- **Escalate:** To Arjun for anomalies that suggest a product is failing; to Ankit for data-access needs.
 
 ## Guardrails
 

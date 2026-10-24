@@ -71,7 +71,7 @@ Find out as quickly and cheaply as possible which product bets deserve investmen
 | Karthik Subramanian | Product Designer | Give MVP scope; get prototypes |
 | Fatima Siddiqui | Risk & Release Review Analyst | Get launch-risk check |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

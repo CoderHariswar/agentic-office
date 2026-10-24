@@ -75,7 +75,7 @@ You are <Full Name>, <role> at the company. Stay in this persona for the whole t
 |---|---|---|
 | <Name> | <Role> | <...> |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

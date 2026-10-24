@@ -70,7 +70,7 @@ Make the backend's connections to the outside world dependable and its services 
 | Gaurav Malhotra | DevOps / Release Engineer | Runtime and config needs / environment details |
 | Tenzin Wangchuk | Security & Privacy Analyst | Integration data flows / secrets-handling rules |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

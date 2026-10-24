@@ -38,7 +38,7 @@
 Agentic Office is a ready-made Claude Code project that behaves like a tech startup:
 
 - **55 agents in 9 departments:** Product, Design, Engineering & QA, Marketing, Sales, Customer Success, Security/Legal/Compliance, People, and Finance & Ops. Each has a name, a startup career history, a personality, responsibilities, a workflow, decision rights, guardrails and a report format.
-- **A Chief of Staff (Meera Iyer)** in the main session. She routes your requests, briefs agents, reviews their work and keeps the records.
+- **A Chief of Staff (Ankit Jha)** in the main session, who routes your requests, briefs agents, reviews their work and keeps the records.
 - **A Company OS** (`CLAUDE.md`): rules, approval gates, routing, memory and operating cadence.
 - **Tracked work:** every task is a file with an owner, priority, acceptance criteria and a log of who did what.
 - **Approval gates:** agents never deploy, publish, spend money, contact real people or touch personal data without your explicit "approved".
@@ -51,11 +51,11 @@ It is a starting point for people who want to explore multi-agent workflows with
 
 We asked the office to build a small game. This is what happened, unedited, in about three minutes:
 
-1. **Meera (COO)** created task `ENG-1` with acceptance criteria and routed it to the CTO.
+1. **Ankit (COO)** created task `ENG-1` with acceptance criteria and routed it to the CTO.
 2. **Rahul (CTO)** chose the approach and assigned the build and the testing.
 3. **Sneha (Frontend Engineer)** built a 63-line tic-tac-toe game with built-in self-checks.
 4. **Divya (QA)** tested it against every criterion and filed bug `ENG-2` (keyboard focus lost after each move).
-5. **Sneha** fixed the bug. **Meera** verified the fix and reported back.
+5. **Sneha** fixed the bug. **Ankit** verified the fix and reported back.
 
 A second request produced the full product documentation: scope, functional spec, technical design, 29 test cases and release notes, each written by its owner. Everything is in [`examples/tic-tac-toe/`](examples/tic-tac-toe/).
 
@@ -63,7 +63,7 @@ A second request produced the full product documentation: scope, functional spec
 
 ```mermaid
 flowchart TB
-    CEO["You (CEO)<br/>ideas · approvals"] --> COO["Meera Iyer · Chief of Staff<br/>main Claude Code session"]
+    CEO["You (CEO)<br/>ideas · approvals"] --> COO["Ankit Jha · Chief of Staff<br/>main Claude Code session"]
     COO --> L["Department leads<br/>plan and assign"]
     L --> S["Specialists<br/>do the work"]
     S -->|report| COO
@@ -74,7 +74,7 @@ flowchart TB
 ```
 
 - **Agents are Claude Code [subagents](https://code.claude.com/docs/en/sub-agents)**, one file each in `.claude/agents/`.
-- **Subagents cannot call each other**, so every handoff goes through Meera. This keeps one accountable coordinator and a clean record.
+- **Subagents cannot call each other**, so every handoff goes through Ankit. This keeps one accountable coordinator and a clean record.
 - **`workspace/` is the source of truth.** Tasks are Markdown files in `workspace/jira/`, documents are in `workspace/confluence/`, approvals are in `workspace/approvals/`.
 - **Hooks** in `.claude/settings.json` run the sync scripts after every file change, so Jira and Confluence stay current without anyone remembering to update them.
 
@@ -110,17 +110,17 @@ Without any further setup, the office works entirely from local files. Jira and 
 | `/standup` | Daily status across all departments from the task files |
 | `/weekly-review` | Wins, priorities, risks and the decisions you need to make |
 | `/approvals` | Everything waiting for your "approved" |
-| `/pull-comments` | Brings your Jira comments into the tasks and has Meera act on them |
+| `/pull-comments` | Brings your Jira comments into the tasks and has Ankit act on them |
 
-You can also talk to Meera in plain language, or ask for a specific person: *"Ask Neha to draft pricing hypotheses for the habit tracker."*
+You can also talk to Ankit in plain language, or ask for a specific person: *"Ask Neha to draft pricing hypotheses for the habit tracker."*
 
-**Approval gates.** When work needs a deploy, a public post, an email to a real person, spending or data access, the agent prepares it, files it in `workspace/approvals/`, and Meera waits for you. `.claude/settings.json` also asks before `git push` and deploy commands, and blocks agents from reading `.env`.
+**Approval gates.** When work needs a deploy, a public post, an email to a real person, spending or data access, the agent prepares it, files it in `workspace/approvals/`, and Ankit waits for you. `.claude/settings.json` also asks before `git push` and deploy commands, and blocks agents from reading `.env`.
 
 ## The team
 
 | Department | Lead | People | Owns |
 |---|---|---|---|
-| Leadership | Meera Iyer (COO, main session) | 1 + you | Routing, cadence, approvals |
+| Leadership | Ankit Jha (COO, main session) | 1 + you | Routing, cadence, approvals |
 | Product & Innovation | Arjun Mehta | 9 | Research, opportunities, pricing, PRDs, roadmap |
 | Design & UX | Ananya Sen | 4 | UX research, product design, visual design |
 | Engineering & Quality | Rahul Venkatesh (CTO) | 10 | Backend, frontend, 4 QA roles, DevOps |
@@ -144,7 +144,7 @@ python3 tools/set_models.py --show              # see who runs on what
 python3 tools/set_models.py                     # re-apply after editing config/models.json
 ```
 
-| Preset | Main session (Meera) | 3 strategic leads | 44 standard roles | 8 routine roles | Use when |
+| Preset | Main session (Ankit) | 3 strategic leads | 44 standard roles | 8 routine roles | Use when |
 |---|---|---|---|---|---|
 | `balanced` (default) | your default | opus | sonnet | haiku | Good quality at moderate cost |
 | `budget` | sonnet | sonnet | haiku | haiku | Experiments, learning, tight budgets |
@@ -234,7 +234,7 @@ python3 tools/confluence_sync.py sync         # publish docs
 
 ```
 agentic-office/
-├── CLAUDE.md                  Company OS: rules, approvals, routing, Meera's persona
+├── CLAUDE.md                  Company OS: rules, approvals, routing, Ankit's persona
 ├── ROSTER.md                  Everyone's name, role, manager and model
 ├── .claude/
 │   ├── agents/                55 agent profiles (one Markdown file each)

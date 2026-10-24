@@ -22,4 +22,4 @@ decided:
 ## Evidence (links)
 ```
 
-When the CEO decides, Meera sets `status`, fills `decided`, adds one line with the CEO's words, and updates the linked task.
+When the CEO decides, Ankit sets `status`, fills `decided`, adds one line with the CEO's words, and updates the linked task.

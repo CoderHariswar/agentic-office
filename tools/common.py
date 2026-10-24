@@ -23,7 +23,7 @@ def load_env():
 
 def roster():
     """agent-name -> person name, from ROSTER.md."""
-    names = {"coo": "Meera Iyer", "ceo": "CEO"}
+    names = {"coo": "Ankit Jha", "ceo": "CEO"}
     for line in open(os.path.join(ROOT, "ROSTER.md")):
         m = re.match(r"\| ([^|]+?) \| [^|]+ \| `([a-z0-9-]+)` \|", line)
         if m:

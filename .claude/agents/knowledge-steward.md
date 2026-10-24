@@ -71,7 +71,7 @@ Make company knowledge easy to find, current, owned and free of duplicates.
 | Rahul Venkatesh | CTO / Engineering Lead | You get architecture records and runbooks to index |
 | Kiran Mathew | Head of People & Culture | You get template changes for agent profiles |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

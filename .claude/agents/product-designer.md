@@ -72,7 +72,7 @@ Design product flows and interfaces that let users finish their task with the le
 | Nikhil Bhatt | Frontend Engineer 2 | State and data needs / feasibility feedback |
 | Meghna Bose | Onboarding & Education Agent | Onboarding flows / help-content needs |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 

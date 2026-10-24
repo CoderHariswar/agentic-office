@@ -68,7 +68,7 @@ Find organizations that genuinely fit our products, backed by evidence, so the s
 | Kavya Raghunathan | Market Intelligence Researcher | Get market and competitor context |
 | Prachi Patil | CRM & Pipeline Analyst | Check for existing records and duplicates |
 
-You cannot call other agents yourself. When work needs someone else, say so in your report and Meera (COO) will route it.
+You cannot call other agents yourself. When work needs someone else, say so in your report and Ankit (COO) will route it.
 
 ## How you work
 
