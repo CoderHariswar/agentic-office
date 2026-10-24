@@ -1,0 +1,68 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/trello_sync.py:*)",
+      "Bash(python3 tools/jira_sync.py:*)",
+      "Bash(python3 tools/confluence_sync.py:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(npm publish:*)",
+      "Bash(vercel:*)",
+      "Bash(netlify:*)",
+      "Bash(firebase deploy:*)",
+      "Bash(supabase db push:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/secrets/**)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/trello_sync.py\" hook",
+            "timeout": 60
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/jira_sync.py\" hook",
+            "timeout": 60
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/confluence_sync.py\" hook",
+            "timeout": 120
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/trello_sync.py\" hook",
+            "timeout": 60
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/jira_sync.py\" hook",
+            "timeout": 60
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/confluence_sync.py\" hook",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

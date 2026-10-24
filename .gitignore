@@ -1,0 +1,6 @@
+.env
+workspace/jira/.trello-sync.log
+workspace/jira/.jira-sync.log
+workspace/confluence/.confluence-sync.log
+__pycache__/
+.DS_Store

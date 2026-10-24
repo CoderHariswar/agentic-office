@@ -1,0 +1,28 @@
+{
+ "issues": {
+  "ENG-1": {
+   "key": "AGENTIC-1",
+   "log": 5,
+   "hash": "ddcdd6dfb6985a99525af67afcadc843",
+   "category": "In Review",
+   "status": "In Review",
+   "owner": "frontend-engineer-1"
+  },
+  "ENG-2": {
+   "key": "AGENTIC-2",
+   "log": 2,
+   "hash": "22a43bfef67b6c6a484e46dd1b2d80bc",
+   "category": "In Review",
+   "status": "In Review",
+   "owner": "frontend-engineer-1"
+  },
+  "PROD-1": {
+   "key": "AGENTIC-3",
+   "log": 9,
+   "hash": "c5ae6450d8d55b8724425eb2fafcb7df",
+   "category": "In Review",
+   "status": "In Review",
+   "owner": "business-product-manager"
+  }
+ }
+}
