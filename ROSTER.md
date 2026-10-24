@@ -6,7 +6,7 @@
 
 | Name | Role | Agent file | Reports to |
 |---|---|---|---|
-| Ankit (you) | Founder / CEO | — (the user) | — |
+| You | Founder / CEO | — (the user) | — |
 | Meera Iyer | Chief of Staff / COO | — (main session, see `CLAUDE.md`) | CEO |
 
 ## Product & Innovation

@@ -16,7 +16,7 @@ CONFLUENCE_DRY_RUN=1 prints API calls instead of sending them.
 import base64, glob, hashlib, html, json, os, re, sys, urllib.error, urllib.request
 from datetime import datetime
 
-from trello_sync import ROOT, SSL, load_env, roster, who
+from common import ROOT, SSL, load_env, roster, who
 
 DOCS = os.path.join(ROOT, "workspace", "confluence")
 STATE = os.environ.get("CONFLUENCE_STATE") or os.path.join(DOCS, ".confluence-state.json")
@@ -200,6 +200,29 @@ def save_state(s):
     json.dump(s, open(STATE, "w"), indent=1)
 
 
+def write_home(page_id, name):
+    """Turn a new space's blank home page into an index of the space."""
+    jira = os.environ.get("JIRA_PROJECT_KEY")
+    jira_link = (f' Work tracking lives in <a href="{html.escape(os.environ["JIRA_SITE"].rstrip("/"))}/browse/'
+                 f'{html.escape(jira)}">Jira ({html.escape(jira)})</a>.') if jira else ""
+    body = ('<ac:structured-macro ac:name="info"><ac:rich-text-body><p><strong>Owner:</strong> Meera Iyer (coo) · '
+            '<strong>Maintained by:</strong> Bhavna Trivedi (knowledge-steward)</p></ac:rich-text-body></ac:structured-macro>'
+            '<p>Company documentation for the agentic office. Every page is written by the agent named in its owner panel '
+            f'and kept in sync automatically from the office workspace.{jira_link}</p>'
+            '<h2>How this space is organized</h2><ul><li><strong>Company</strong>: Company OS, roster, architecture, '
+            'documentation standard</li><li><strong>Department Playbooks</strong>: how each department works</li>'
+            '<li><strong>Products</strong>: one folder per product with overview, scope, functional spec, technical design, '
+            'test cases and release notes</li><li><strong>Templates</strong>: templates for agent profiles and documents</li></ul>'
+            '<p>Rules for writing here: <ac:link><ri:page ri:content-title="Documentation Standard"/></ac:link>.</p>'
+            '<h2>All pages</h2><ac:structured-macro ac:name="pagetree"><ac:parameter ac:name="root"><ac:link>'
+            '<ri:page ri:content-title="@self"/></ac:link></ac:parameter><ac:parameter ac:name="expandCollapseAll">true'
+            '</ac:parameter></ac:structured-macro>')
+    version = call("GET", f"/api/v2/pages/{page_id}")["version"]["number"]
+    call("PUT", f"/api/v2/pages/{page_id}", {"id": page_id, "status": "current", "title": name,
+                                             "body": {"representation": "storage", "value": body},
+                                             "version": {"number": version + 1, "message": "Space index"}})
+
+
 def ensure_space(s):
     if s["space"]:
         return s["space"]
@@ -213,6 +236,7 @@ def ensure_space(s):
             "value": "Company documentation for the agentic office. Mirrored from workspace/confluence.", "representation": "plain"}}})
         got = call("GET", f"/api/v2/spaces?keys={key}")["results"] or [{"id": "dry-space", "homepageId": "dry-home"}]
         space = {"id": got[0]["id"], "home": got[0].get("homepageId")}
+        write_home(space["home"], name)
     s["space"] = space
     save_state(s)
     return space

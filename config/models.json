@@ -1,0 +1,55 @@
+{
+  "_help": [
+    "Which Claude model each agent runs on. Edit, then run: python3 tools/set_models.py",
+    "Values: an alias (opus, sonnet, haiku, fable), 'inherit' (same model as the main session), or a full model ID such as claude-sonnet-5-5.",
+    "preset: picks the model for each tier below. Switch quickly with: python3 tools/set_models.py --preset budget",
+    "main_session: model for Meera (the main Claude Code session). null leaves your own Claude Code default alone.",
+    "tiers: which agents are 'strategic' or 'routine'. Every agent not listed is 'standard'.",
+    "overrides: per-agent model that beats the preset, e.g. {\"cto\": \"claude-opus-5-5\"}."
+  ],
+  "preset": "balanced",
+  "presets": {
+    "balanced": {
+      "main_session": null,
+      "strategic": "opus",
+      "standard": "sonnet",
+      "routine": "haiku"
+    },
+    "budget": {
+      "main_session": "sonnet",
+      "strategic": "sonnet",
+      "standard": "haiku",
+      "routine": "haiku"
+    },
+    "quality": {
+      "main_session": "opus",
+      "strategic": "opus",
+      "standard": "opus",
+      "routine": "sonnet"
+    },
+    "single": {
+      "main_session": null,
+      "strategic": "inherit",
+      "standard": "inherit",
+      "routine": "inherit"
+    }
+  },
+  "tiers": {
+    "strategic": [
+      "product-lead",
+      "cto",
+      "chief-risk-officer"
+    ],
+    "routine": [
+      "customer-support",
+      "feedback-classification",
+      "crm-pipeline-analyst",
+      "lead-qualification",
+      "publishing-distribution",
+      "workload-capacity-analyst",
+      "operations-portfolio-coordinator",
+      "knowledge-steward"
+    ]
+  },
+  "overrides": {}
+}

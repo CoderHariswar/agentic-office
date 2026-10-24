@@ -3,6 +3,7 @@
 
 Commands:
   check        verify credentials and project, list issue types and statuses
+  setup        add Blocked and In Review stages to the project workflow and board
   sync [FILE]  push new/changed task files (all changed ones if no FILE)
   hook         same as sync, but never fails; called by Claude Code hooks
   pull         copy new human comments from Jira issues into the task logs
@@ -10,10 +11,10 @@ Commands:
 Config (env or .env in the office root): JIRA_SITE, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT_KEY.
 JIRA_DRY_RUN=1 prints API calls instead of sending them.
 """
-import base64, json, os, re, sys, urllib.error, urllib.request
+import base64, json, os, re, sys, urllib.error, urllib.request, uuid
 from datetime import datetime
 
-from trello_sync import BOT, JIRA, ROOT, SSL, load_env, parse, roster, task_files, who, describe
+from common import BOT, JIRA, ROOT, SSL, load_env, parse, roster, task_files, who, describe
 
 STATE = os.environ.get("JIRA_STATE") or os.path.join(JIRA, ".jira-state.json")
 LOG = os.path.join(JIRA, ".jira-sync.log")
@@ -26,12 +27,12 @@ TARGETS = {"Not Started": ["To Do", "Backlog", "Open"], "Active": ["In Progress"
 TYPES = {"bug": "Bug", "story": "Story", "epic": "Epic"}
 
 
-def call(method, path, body=None):
+def call(method, path, body=None, base="/rest/api/3"):
     if os.environ.get("JIRA_DRY_RUN"):
         print(method, path, json.dumps(body)[:120] if body else "")
         return {"key": "DRY-1", "transitions": [], "comments": []}
     auth = base64.b64encode(f"{os.environ['JIRA_EMAIL']}:{os.environ['JIRA_API_TOKEN']}".encode()).decode()
-    req = urllib.request.Request(os.environ["JIRA_SITE"].rstrip("/") + "/rest/api/3" + path, method=method,
+    req = urllib.request.Request(os.environ["JIRA_SITE"].rstrip("/") + base + path, method=method,
                                  data=json.dumps(body).encode() if body is not None else None,
                                  headers={"Authorization": "Basic " + auth, "Accept": "application/json",
                                           "Content-Type": "application/json"})
@@ -171,6 +172,63 @@ def check():
     print("Statuses:", ", ".join(sorted(statuses)))
 
 
+NEW_STAGES = [("Blocked", "Work cannot continue until a blocker is removed."),
+              ("In Review", "Work is done and waiting for review or QA.")]
+MANUAL = ("Add them by hand instead: Jira project -> Board -> ... -> Configure board -> Columns -> "
+          "add columns 'Blocked' and 'In Review' before 'Done'.")
+
+
+def setup():
+    """Add Blocked and In Review to the project's workflow and board (company-managed projects)."""
+    key = os.environ["JIRA_PROJECT_KEY"]
+    project = call("GET", f"/project/{key}")
+    scheme = call("GET", f"/workflowscheme/project?projectId={project['id']}")["values"][0]["workflowScheme"]
+    data = call("POST", "/workflows?expand=values.transitions", {"workflowNames": [scheme["defaultWorkflow"]]})
+    wf = data["workflows"][0]
+    have = {st["name"] for st in data["statuses"]}
+    missing = [(n, d) for n, d in NEW_STAGES if n not in have]
+    if missing:
+        if not wf.get("isEditable", True):
+            sys.exit("This project's workflow can't be edited through the API. " + MANUAL)
+        defs = [{k: st[k] for k in ("id", "statusReference", "name", "statusCategory", "description")} for st in data["statuses"]]
+        next_id = max(int(t["id"]) for t in wf["transitions"]) + 10
+        for name, desc in missing:
+            ref = str(uuid.uuid4())
+            defs.append({"statusReference": ref, "name": name, "statusCategory": "IN_PROGRESS", "description": desc})
+            wf["statuses"].append({"statusReference": ref, "layout": {}, "properties": {}, "deprecated": False})
+            wf["transitions"].append({"id": str(next_id), "type": "GLOBAL", "toStatusReference": ref, "links": [], "name": name,
+                                      "description": "", "validators": [], "triggers": [], "properties": {},
+                                      "actions": [{"ruleKey": "system:update-field",
+                                                   "parameters": {"field": "resolution", "value": "", "mode": ""}}]})
+            next_id += 10
+        call("POST", "/workflows/update", {"statuses": defs, "workflows": [
+            {k: wf[k] for k in ("id", "version", "name", "description", "startPointLayout", "statuses", "transitions")}]})
+        print("Added to workflow:", ", ".join(n for n, _ in missing))
+    else:
+        print("Workflow already has Blocked and In Review.")
+
+    # Board columns: Jira has no public API for this; use the one its own board settings page calls.
+    try:
+        board = call("GET", f"/board?projectKeyOrId={key}", base="/rest/agile/1.0")["values"][0]["id"]
+        model = call("GET", f"/rapidviewconfig/editmodel.json?rapidViewId={board}", base="/rest/greenhopper/1.0")["rapidListConfig"]
+        cols = [{"id": c["id"], "name": c["name"], "min": c["min"], "max": c["max"], "isKanPlanColumn": c["isKanPlanColumn"],
+                 "mappedStatuses": [{"id": st["id"]} for st in c["mappedStatuses"]]} for c in model["mappedColumns"]]
+        unmapped = {st["name"]: st["id"] for st in model["unmappedStatuses"]}
+        at = next((i for i, c in enumerate(cols) if c["name"] == "Done"), len(cols))
+        added = []
+        for name, _ in NEW_STAGES:
+            if name in unmapped and name not in {c["name"] for c in cols}:
+                cols.insert(at, {"name": name, "min": "", "max": "", "isKanPlanColumn": False, "mappedStatuses": [{"id": unmapped[name]}]})
+                at += 1
+                added.append(name)
+        if added:
+            call("PUT", "/rapidviewconfig/columns", {"rapidViewId": board, "currentStatisticsField": {"id": "issueCount_"},
+                                                     "mappedColumns": cols}, base="/rest/greenhopper/1.0")
+        print("Board columns:", ", ".join(c["name"] for c in cols if not c["isKanPlanColumn"]))
+    except (RuntimeError, KeyError, IndexError) as e:
+        print(f"Could not update board columns ({e}). " + MANUAL)
+
+
 def main():
     load_env()
     cmd, args = (sys.argv[1:2] or ["sync"])[0], sys.argv[2:]
@@ -181,7 +239,7 @@ def main():
         sys.exit("Jira not configured: set JIRA_SITE, JIRA_EMAIL, JIRA_API_TOKEN, JIRA_PROJECT_KEY in .env")
     s = load_state()
     try:
-        {"check": check, "pull": lambda: pull(s)}.get(cmd, lambda: sync(args, s))()
+        {"check": check, "setup": setup, "pull": lambda: pull(s)}.get(cmd, lambda: sync(args, s))()
     except Exception as e:
         if cmd != "hook":
             raise

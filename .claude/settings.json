@@ -1,7 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 tools/trello_sync.py:*)",
       "Bash(python3 tools/jira_sync.py:*)",
       "Bash(python3 tools/confluence_sync.py:*)"
     ],
@@ -27,11 +26,6 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/trello_sync.py\" hook",
-            "timeout": 60
-          },
-          {
-            "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/jira_sync.py\" hook",
             "timeout": 60
           },
@@ -46,11 +40,6 @@
     "Stop": [
       {
         "hooks": [
-          {
-            "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/trello_sync.py\" hook",
-            "timeout": 60
-          },
           {
             "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/tools/jira_sync.py\" hook",

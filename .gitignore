@@ -1,6 +1,8 @@
 .env
-workspace/jira/.trello-sync.log
-workspace/jira/.jira-sync.log
-workspace/confluence/.confluence-sync.log
 __pycache__/
 .DS_Store
+# Sync logs and per-install state (IDs of your own Jira issues and Confluence pages)
+workspace/jira/.jira-sync.log
+workspace/jira/.jira-state.json
+workspace/confluence/.confluence-sync.log
+workspace/confluence/.confluence-state.json

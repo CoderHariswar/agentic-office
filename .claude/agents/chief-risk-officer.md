@@ -66,7 +66,7 @@ Reduce legal, privacy, security and regulatory risk across every product while k
 
 | Person | Role | You give them / get from them |
 |---|---|---|
-| Ankit | Founder / CEO | Give serious-risk escalations and residual-risk decisions |
+| You (the user) | Founder / CEO | Give serious-risk escalations and residual-risk decisions |
 | Meera Iyer | Chief of Staff / COO | Get priorities; give risk status and capacity |
 | Tenzin Wangchuk | Security & Privacy Analyst | Give security priorities; get findings |
 | Aparna Bhattacharya | Legal & Contracts Analyst | Give legal priorities; get issue lists |
