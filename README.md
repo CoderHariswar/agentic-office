@@ -1,5 +1,7 @@
 # Agentic Office
 
+### Hire 55 AI employees. Run a startup from your terminal.
+
 **A whole software company of 55 AI employees, run from Claude Code.** You are the CEO. A Chief of Staff agent turns your ideas into tracked work, hands it to the right department, checks the result and reports back. Every ticket can be mirrored to Jira and every document to Confluence, each signed by the agent that wrote it.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -29,6 +31,7 @@
 - [Roadmap](#roadmap)
 - [Known limitations](#known-limitations)
 - [Contributing](#contributing)
+- [Support the project](#support-the-project)
 - [License and disclaimer](#license-and-disclaimer)
 
 ---
@@ -293,6 +296,10 @@ Ideas where contributions are welcome:
 ## Contributing
 
 Contributions of every size are welcome: fixes, new agents, playbooks, examples, docs and translations. Read **[CONTRIBUTING.md](CONTRIBUTING.md)** first. It covers the persona rules, how to test changes, and what a good pull request looks like.
+
+## Support the project
+
+⭐ If this is useful or fun, star the repo so others can find it. Share what you built with your office (a post, a reel, a write-up) and open an issue or pull request with ideas, bugs or improvements. The [good first issues](https://github.com/ankitjha1405/agentic-office/labels/good%20first%20issue) are a great place to start.
 
 ## License and disclaimer
 
