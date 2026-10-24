@@ -40,35 +40,35 @@ def plan(cfg):
 def apply(models, main):
     for agent, model in models.items():
         path = os.path.join(AGENTS, agent + ".md")
-        text = open(path).read()
+        text = open(path, encoding="utf-8").read()
         new = re.sub(r"^model: .*$", f"model: {model}", text, count=1, flags=re.M)
         if "\nmodel: " not in new.split("---", 2)[1]:  # no model line yet: add one to the frontmatter
             new = new.replace("\n---", f"\nmodel: {model}\n---", 1)
-        open(path, "w").write(new)
+        open(path, "w", encoding="utf-8").write(new)
 
     roster = os.path.join(ROOT, "ROSTER.md")
     lines = []
-    for line in open(roster):
+    for line in open(roster, encoding="utf-8"):
         m = re.match(r"(\| [^|]+ \| [^|]+ \| `([a-z0-9-]+)` \| [^|]+ \| )[^|]+( \|)$", line.rstrip("\n"))
         lines.append(f"{m.group(1)}{models[m.group(2)]}{m.group(3)}\n" if m and m.group(2) in models else line)
-    open(roster, "w").write("".join(lines))
+    open(roster, "w", encoding="utf-8").write("".join(lines))
 
     settings_path = os.path.join(ROOT, ".claude", "settings.json")
-    settings = json.load(open(settings_path))
+    settings = json.load(open(settings_path, encoding="utf-8"))
     if main:
         settings["model"] = main
     else:
         settings.pop("model", None)
-    open(settings_path, "w").write(json.dumps(settings, indent=2) + "\n")
+    open(settings_path, "w", encoding="utf-8").write(json.dumps(settings, indent=2) + "\n")
 
 
 def main():
-    cfg = json.load(open(CONFIG))
+    cfg = json.load(open(CONFIG, encoding="utf-8"))
     args = sys.argv[1:]
     if args[:1] == ["--preset"] and len(args) == 2:
         cfg["preset"] = args[1]
         plan(cfg)  # validate before saving
-        open(CONFIG, "w").write(json.dumps(cfg, indent=2) + "\n")
+        open(CONFIG, "w", encoding="utf-8").write(json.dumps(cfg, indent=2) + "\n")
     models, main_model = plan(cfg)
     counts = {}
     for m in models.values():
@@ -79,7 +79,7 @@ def main():
     else:
         apply(models, main_model)
         for a, m in models.items():  # self-check: every file now carries its planned model
-            assert re.search(rf"^model: {re.escape(m)}$", open(os.path.join(AGENTS, a + '.md')).read(), re.M), a
+            assert re.search(rf"^model: {re.escape(m)}$", open(os.path.join(AGENTS, a + '.md'), encoding="utf-8").read(), re.M), a
     print(f"Preset '{cfg['preset']}': " + ", ".join(f"{n} agents on {m}" for m, n in sorted(counts.items()))
           + f". Main session: {main_model or 'your Claude Code default'}.")
 

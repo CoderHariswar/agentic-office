@@ -15,7 +15,7 @@ BOT = "[office]"  # prefix on comments we write, so pull can tell them from huma
 def load_env():
     path = os.path.join(ROOT, ".env")
     if os.path.exists(path):
-        for line in open(path):
+        for line in open(path, encoding="utf-8-sig"):  # utf-8-sig: Notepad adds a BOM
             k, _, v = line.strip().partition("=")
             if k and not k.startswith("#"):
                 os.environ.setdefault(k.strip(), v.strip().strip('"'))
@@ -24,7 +24,7 @@ def load_env():
 def roster():
     """agent-name -> person name, from ROSTER.md."""
     names = {"coo": "Ankit Jha", "ceo": "CEO"}
-    for line in open(os.path.join(ROOT, "ROSTER.md")):
+    for line in open(os.path.join(ROOT, "ROSTER.md"), encoding="utf-8"):
         m = re.match(r"\| ([^|]+?) \| [^|]+ \| `([a-z0-9-]+)` \|", line)
         if m:
             names[m.group(2)] = m.group(1)
@@ -33,7 +33,7 @@ def roster():
 
 def parse(path):
     """Task file -> (frontmatter dict, sections dict, log entries, content hash)."""
-    text = open(path).read()
+    text = open(path, encoding="utf-8").read()
     _, fm, body = text.split("---", 2)
     meta = {}
     for line in fm.strip().splitlines():
