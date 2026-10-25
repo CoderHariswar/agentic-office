@@ -67,13 +67,13 @@ def plain(node):
 
 def load_state():
     try:
-        return json.load(open(STATE))
+        return json.load(open(STATE, encoding="utf-8"))
     except (OSError, ValueError):
         return {"issues": {}}
 
 
 def save_state(s):
-    json.dump(s, open(STATE, "w"), indent=1)
+    json.dump(s, open(STATE, "w", encoding="utf-8"), indent=1)
 
 
 def comment(issue, text):
@@ -151,7 +151,7 @@ def pull(s):
                if c["id"] not in seen and not plain(c["body"]).startswith(BOT)]
         if not new:
             continue
-        with open(f, "a") as fh:
+        with open(f, "a", encoding="utf-8") as fh:
             for c in new:
                 author = c.get("author", {}).get("displayName", "Jira user")
                 text = " ".join(plain(c["body"]).split())
@@ -243,7 +243,7 @@ def main():
     except Exception as e:
         if cmd != "hook":
             raise
-        with open(LOG, "a") as fh:  # hooks must never block the agents
+        with open(LOG, "a", encoding="utf-8") as fh:  # hooks must never block the agents
             fh.write(f"{datetime.now().isoformat()} {type(e).__name__}: {e}\n")
 
 

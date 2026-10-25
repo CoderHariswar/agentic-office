@@ -109,6 +109,8 @@ claude
 
 Without any further setup, the office works entirely from local files. Jira and Confluence are optional.
 
+**On Windows:** use `py` where the docs say `python3`, and see [Windows notes](docs/integrations.md#windows) for the hooks.
+
 ## Daily use
 
 | Command | What it does |

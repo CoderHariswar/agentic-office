@@ -87,6 +87,21 @@ Page titles must be unique within a space; the documentation standard has agents
 - They only send what changed. Each script keeps a small state file (`.jira-state.json`, `.confluence-state.json`) that maps local files to Jira issues and Confluence pages. These files are git-ignored because they are specific to your site. Keep them: if you delete them, the next sync creates duplicates.
 - They never block the agents. Errors go to `workspace/jira/.jira-sync.log` and `workspace/confluence/.confluence-sync.log`, and Ankit mentions them if they are not empty.
 
+## Windows
+
+The steps above are written for macOS and Linux. On Windows (PowerShell), change these:
+
+| Step | macOS / Linux | Windows |
+|---|---|---|
+| Python command | `python3` | `py` (the python.org installer adds `py` and `python`, not `python3`) |
+| Create `.env` | `cp .env.example .env` | `Copy-Item .env.example .env` |
+| Run a script | `python3 tools/jira_sync.py check` | `py tools\jira_sync.py check` |
+| Dry run | `JIRA_DRY_RUN=1 python3 tools/jira_sync.py sync` | `$env:JIRA_DRY_RUN=1; py tools\jira_sync.py sync` |
+
+**The hooks.** Claude Code on Windows runs hook commands through Git Bash, so the quoted `"$CLAUDE_PROJECT_DIR/..."` paths in `.claude/settings.json` work as written, including paths with spaces. The hooks call `python3`, so check that `python3 --version` prints a version in Git Bash. If it doesn't (or it opens the Microsoft Store), either install Python from the Microsoft Store, which provides `python3`, or change `python3` to `py` in the four hook commands in your copy of `.claude/settings.json`.
+
+**Encoding.** The scripts read and write files as UTF-8 on every platform, so names like "Zoë" and characters like "→" in task files survive the Windows default code page. A `.env` saved by Notepad with a byte-order mark also works.
+
 ## Troubleshooting
 
 | Problem | Fix |

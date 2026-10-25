@@ -58,12 +58,12 @@ def link(label, target):
     key = re.match(r"([A-Z]+-\d+)-", os.path.basename(path))
     if key and os.path.dirname(path).endswith(os.path.join("workspace", "jira")):
         try:
-            issue = json.load(open(os.path.join(ROOT, "workspace", "jira", ".jira-state.json")))["issues"][key.group(1)]["key"]
+            issue = json.load(open(os.path.join(ROOT, "workspace", "jira", ".jira-state.json"), encoding="utf-8"))["issues"][key.group(1)]["key"]
             return f'<a href="{os.environ.get("JIRA_SITE", "").rstrip("/")}/browse/{issue}">{label}</a>'
         except (OSError, KeyError, ValueError):
             pass
     if path.endswith(".md") and os.path.exists(path):
-        meta, body = split_frontmatter(open(path).read())
+        meta, body = split_frontmatter(open(path, encoding="utf-8").read())
         title = meta.get("title") or (re.search(r"^# (.+)$", body, re.M) or [None, ""])[1]
         if title:
             return (f'<ac:link><ri:page ri:content-title="{html.escape(title)}"/>'
@@ -191,13 +191,13 @@ def docs():
 
 def load_state():
     try:
-        return json.load(open(STATE))
+        return json.load(open(STATE, encoding="utf-8"))
     except (OSError, ValueError):
         return {"space": None, "folders": {}, "pages": {}}
 
 
 def save_state(s):
-    json.dump(s, open(STATE, "w"), indent=1)
+    json.dump(s, open(STATE, "w", encoding="utf-8"), indent=1)
 
 
 def write_home(page_id, name):
@@ -265,7 +265,7 @@ def ensure_folder(parts, s):
 
 
 def sync_doc(path, folder, defaults, s, names):
-    text = open(path).read()
+    text = open(path, encoding="utf-8").read()
     digest = hashlib.md5(text.encode()).hexdigest()
     rel = os.path.relpath(path, ROOT)
     page = s["pages"].get(rel)
@@ -327,7 +327,7 @@ def main():
     except Exception as e:
         if cmd != "hook":
             raise
-        with open(LOG, "a") as fh:  # hooks must never block the agents
+        with open(LOG, "a", encoding="utf-8") as fh:  # hooks must never block the agents
             fh.write(f"{datetime.now().isoformat()} {type(e).__name__}: {e}\n")
 
 
