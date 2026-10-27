@@ -11,7 +11,7 @@
 
 [![Watch the 73-second tour of Agentic Office](docs/media/video-thumbnail-1920x1080.png)](docs/media/agentic-office-promo.mp4)
 
-▶ **[Watch the 73-second tour](docs/media/agentic-office-promo.mp4)**: one idea goes from the CEO prompt to a tested game, with Jira and Confluence kept in sync.
+▶ **[Watch the 73-second tour](https://drive.google.com/file/d/1D73M2WlcavSW7R3fCN5Mn4xsDy1kizcg/view?usp=sharing)**: one idea goes from the CEO prompt to a tested game, with Jira and Confluence kept in sync.
 
 > [!WARNING]
 > **Use an API key, not a Claude subscription, for anything beyond light personal experiments.** This project was built and tested on a Claude Pro/Max subscription. Running dozens of agents and headless sessions goes beyond the ordinary individual use that subscriptions are meant for. [Read why and how to switch](#subscription-or-api-key).
